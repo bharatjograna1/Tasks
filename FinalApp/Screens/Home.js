@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
 import { StyleSheet, Image, FlatList, ScrollView, View, TouchableOpacity } from 'react-native';
 import Card from './EventCard.js';
-import Icon from "react-native-vector-icons/MaterialIcons";
+import Icon from "react-native-vector-icons/Ionicons";
 
 
-class EventList extends Component {
+class Home extends Component {
 
     static navigationOptions = ({ navigation }) => ({
         title: "Home",
+
         headerLeft: (
             <View style={{ paddingHorizontal: 10 }}>
-                <TouchableOpacity onPress={() => navigation.navigate("DrawerOpen")}>
-                    <Icon name="menu" size={35} color="green" />
+                <TouchableOpacity onPress={() => navigation.openDrawer()}>
+                    <Icon name="md-menu" size={35} color="green" />
                 </TouchableOpacity>
             </View>
         )
@@ -70,4 +71,4 @@ const styles = StyleSheet.create({
 });
 
 
-export default EventList;
+export default Home;

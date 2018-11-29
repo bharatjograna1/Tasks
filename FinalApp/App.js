@@ -18,7 +18,8 @@ const MainScreens = StackNavigator({
 const Drawer = DrawerNavigator({
   Draw: {
     screen: MainScreens
-  }
+  },
+
 },
   {
     contentComponent: DrawerMenu,

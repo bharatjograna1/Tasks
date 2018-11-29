@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native';
 
 
 class Drawer extends Component {
+
     constructor() {
         super();
         this.handlepress = this.handlepress.bind(this);
@@ -21,7 +22,7 @@ class Drawer extends Component {
                 </View>
                 <View style={styles.content}>
                     <TouchableOpacity onPress={this.handlepress}>
-                        <Text>Bharat</Text>
+                        <Text>Login</Text>
                     </TouchableOpacity>
                 </View>
             </View>
