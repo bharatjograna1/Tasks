@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Text, StyleSheet, TextInput, TouchableOpacity, View } from 'react-native'
 import ValidationComponent from 'react-native-form-validator'
 
@@ -45,6 +45,7 @@ export default class Registration extends ValidationComponent {
             <View style={styles.container}>
 
                 <TextInput
+                    style={styles.instructions}
                     placeholder="enter name"
                     maxLength={10}
                     onChangeText={nameconst => this.setState({ name: nameconst })}
@@ -100,8 +101,6 @@ const styles = StyleSheet.create({
         color: "#009",
     },
     instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
+        color: '#fff',
     },
 });
