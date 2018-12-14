@@ -12,12 +12,13 @@ export default class Registration extends ValidationComponent {
         contact: "",
         email: "",
         password: "",
+        erstate: "",
     }
 
     handlevalid = () => {
 
         if (this.validate({ name: { minlength: 2, required: true } }) && namerule.test(this.state.name) === true) {
-
+            this.setState({ erstate: "" })
             if (this.validate({ date: { date: 'DD-MM-YYYY' } })) {
 
                 if (this.validate({ contact: { minlength: 9 } })) {
@@ -36,7 +37,7 @@ export default class Registration extends ValidationComponent {
 
             } else { alert("invalid date") }
 
-        } else { alert("invalid name") }
+        } else { this.setState({ erstate: "invalid name" }) }
 
     }
 
@@ -45,34 +46,38 @@ export default class Registration extends ValidationComponent {
             <View style={styles.container}>
 
                 <TextInput
-                    style={styles.instructions}
                     placeholder="enter name"
                     maxLength={10}
                     onChangeText={nameconst => this.setState({ name: nameconst })}
                 />
+                <Text>{this.state.erstate}</Text>
 
                 <TextInput
                     placeholder="dd-mm-yyyy"
                     maxLength={8}
                     onChangeText={dateconst => this.setState({ date: dateconst })}
                 />
+                <Text>{this.state.erstate}</Text>
 
                 <TextInput
                     placeholder="enter contact no"
                     maxLength={10}
                     onChangeText={contactconst => this.setState({ contact: contactconst })}
                 />
+                <Text>{this.state.erstate}</Text>
 
                 <TextInput
                     placeholder="enter email"
                     onChangeText={emailconst => this.setState({ email: emailconst })}
                 />
+                <Text>{this.state.erstate}</Text>
 
                 <TextInput
                     placeholder="enter password"
                     secureTextEntry={true}
                     onChangeText={passwordconst => this.setState({ password: passwordconst })}
                 />
+                <Text>{this.state.erstate}</Text>
 
                 <TouchableOpacity onPress={this.handlevalid}>
                     <Text>

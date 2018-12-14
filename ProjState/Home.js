@@ -13,8 +13,17 @@ export default class Home extends Component {
     }
 
     render() {
+        var print = [];
+
+        for (let i = 0; i < 10; i++) {
+            print.push(
+                <Text>{i}</Text>
+            );
+        }
+
         return (
             <View style={styles.container}>
+                {print}
                 <TextInput
                     onChangeText={inputConst => this.setState({ input: inputConst })}
                     style={styles.instructions}

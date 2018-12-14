@@ -1,0 +1,23 @@
+constructor
+component will mount
+render
+component did mount
+
+running
+
+component will receive props
+should component update
+component will update
+render
+component did update
+
+component will unmount
+end
+
+constructor
+examin props and state return component
+
+component
+react-native ui bilding block that is writen in js, class or function
+
+state props

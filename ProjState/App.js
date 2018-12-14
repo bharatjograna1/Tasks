@@ -4,12 +4,7 @@ import Second from './Second.js';
 import Registration from './Registration'
 
 export default StackNavigator({
-    Registration: {
-        screen: Registration,
-        navigationOptions: () => ({
-            title: 'Registration'
-        })
-    },
+
     Home: {
         screen: Home,
         navigationOptions: () => ({
@@ -21,5 +16,12 @@ export default StackNavigator({
         navigationOptions: () => ({
             title: 'Second'
         })
-    }
+    },
+    Registration: {
+        screen: Registration,
+        navigationOptions: () => ({
+            title: 'Registration'
+        })
+    },
+
 });
